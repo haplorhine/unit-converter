@@ -4,6 +4,7 @@
 
 html {
     height: 100%;
+    font-size: calc(729vw / 400); /* base font size */
     overflow: hidden;
 }
 
@@ -11,6 +12,10 @@ body {
     margin: 0;
     height: 100%;
     overflow: hidden;
+    background: #1C1C1C;
+    display: flex;
+    align-items: center;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 /* apect ratio
@@ -26,6 +31,12 @@ section input 285 / 729 %
     max-width: 100%;
     height: calc(729 * 100vw / 550);
     max-height: 100%;
-    background: #000b66;
+    background: #F4F4F4;
     overflow: hidden;
 }
+
+@media (min-aspect-ratio: 550 / 729) {
+    html {
+      font-size: calc(550vh / 400);
+    }
+  }
