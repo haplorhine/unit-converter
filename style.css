@@ -4,6 +4,9 @@
 
 :root {
     --theme-color: #6943FF;
+    --theme-secondary-light: #F4F4F4;
+    --output-heading-light: #5A537B;
+
 }
 
 html {
@@ -38,12 +41,8 @@ section input 285 / 729 %
     max-height: 100%;
     background: #F4F4F4;
     overflow: hidden;
-    background: url(light-mode.png);
+    /* background: url(light-mode.png); */
     background-size: cover;
-}
-
-.container * {
-    opacity: .5;
 }
 
 #input-section {
@@ -53,6 +52,7 @@ section input 285 / 729 %
 }
 
 #app-title {
+    color: white;
     font-size: 2.64rem;
     margin: 0;
     font-weight: 800;
@@ -60,7 +60,6 @@ section input 285 / 729 %
 
 #input-field {
     color: white;
-    padding-left: 1.2rem;
     text-align: center;
     font-size: 5.8rem;
     font-family: inherit;
@@ -73,10 +72,42 @@ section input 285 / 729 %
     border-radius: 0.5rem;
 }
 
+/* Remove input field arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
 #output-section {
-    background: red;
+    display: flex;
+    justify-content: center;
+    row-gap: 2.2rem;
+    flex-direction: column;
+    background: var(--theme-secondary-light);
     height: 61%;
-    padding: 1rem;
+    padding: 0 2.4rem;
+}
+
+.output-field {
+    background: white;
+    height: 11rem;
+}
+
+
+.output-field h2 {
+    margin: 2.7rem 0 1.4rem;
+    color: var(--output-heading-light);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.output-field p {
+    font-size: 1.4rem;
 }
 
 
